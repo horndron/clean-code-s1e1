@@ -42,12 +42,14 @@
   margin: 0;
   padding: 0px;
 }
+/* тут идет обнуление стилей, поэтому не меняютс селекторы на классы */
 li,
 h3 {
   list-style: none;
 }
+/* тут идет обнуление стилей, поэтому не меняютс селекторы на классы */
 input,
-.btn{
+button{
   outline: none;
 }
 .btn {
@@ -63,8 +65,7 @@ input,
   color: #3a3A3a;
 }
 /* Heading */
-h3,
-label[for="new-task"] {
+.title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -73,7 +74,7 @@ label[for="new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -85,12 +86,12 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.task:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.title {
   display: block;
   margin: 0 0 20px;
 }
@@ -99,7 +100,7 @@ label[for="new-task"] {
 }
 
 /* Task list */
-li {
+.list-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -108,20 +109,20 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.list-item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.list-item > .checkbox {
   margin: 0 10px;
 }
-li > label {
+.list-item > .label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li > input[type="text"] {
+.list-item > .task {
   width: 226px;
 }
 .btn.delete .img {
@@ -134,21 +135,21 @@ li > input[type="text"] {
 }
 
 /* Completed */
-.list#completed label {
+.list#completed .label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.list li input[type=text] {
+.list .list-item .text {
   display: none;
 }
 
-.list li.edit-mode input[type=text] {
+.list .edit-mode .text {
   display: inline-block;
   width: 224px;
 }
 
-.list li.edit-mode label {
+.list .edit-mode .label {
   display: none;
 }
