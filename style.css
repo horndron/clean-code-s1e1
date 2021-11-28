@@ -4,21 +4,21 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.information {
+.info {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.information img {
+.info img {
   width: 100%;
 }
-.information .more-inf {
+.info .more {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-  .information { text-align: center;
+  .info { text-align: center;
   }
 }
 .main-content {
@@ -31,7 +31,7 @@ body {
   display: inline-block;
   flex-grow: 1
 }
-.task-row-wrapper {
+.wrapper {
   display: flex;
 }
 ul {
@@ -128,7 +128,7 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
+ul#completed label {
   text-decoration: line-through
   color: #888;
 }
